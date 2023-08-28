@@ -5,7 +5,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Primary
-public class MtbTraining implements Training{
+public class MtbTraining implements Training {
+
+    public MtbTraining() {
+        System.out.println("Constructor called: " + getClass().getSimpleName());
+    }
 
     @Override
     public String Plan() {

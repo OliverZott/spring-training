@@ -14,7 +14,8 @@ public class TrainingController {
 
 
     @Autowired
-    public TrainingController(@Qualifier("mtbTraining") Training training, Gear gear) {
+    public TrainingController(@Qualifier("scubaTraining") Training training, Gear gear) {
+        System.out.println("Constructor called: " + getClass().getSimpleName());
 
         this.training = training;
         this.gear = gear;

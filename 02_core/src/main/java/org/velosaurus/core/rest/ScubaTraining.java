@@ -1,11 +1,13 @@
 package org.velosaurus.core.rest;
 
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HikeTraining implements Training{
+@Lazy
+public class ScubaTraining implements Training {
 
-    public HikeTraining() {
+    public ScubaTraining() {
         System.out.println("Constructor called: " + getClass().getSimpleName());
     }
 
