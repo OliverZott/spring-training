@@ -1,4 +1,4 @@
-# Spring Boot Training Examples
+# Spring Boot - Training Examples
 
 ## Setup
 
@@ -10,3 +10,23 @@
   - config in `application.properties`
   - `localhost:8080/actuator/health`
   - `localhost:8080/actuator/info`
+- **Security**
+  - basic usage: auto generated credentials or in application.properties defined (bad practice)
+
+
+## CLI
+
+- JAR file includes Tomcat and code
+```shell
+# windows
+mvnw package
+mvnw spring-boot:run  # using spring-boot-maven plugin
+java -jar <jar-file-name>
+mvnw clean compile test
+
+# linux
+./mvnw package
+./mvnw spring-boot:run  # using spring-boot-maven plugin
+java -jar <jar-file-name>
+./mvnw clean compile test
+```
