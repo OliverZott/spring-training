@@ -18,15 +18,10 @@
 
 - JAR file includes Tomcat and code
 ```shell
-# windows
-mvnw package
-mvnw spring-boot:run  # using spring-boot-maven plugin
-java -jar <jar-file-name>
-mvnw clean compile test
-
-# linux
+# windows / linux
 ./mvnw package
 ./mvnw spring-boot:run  # using spring-boot-maven plugin
-java -jar <jar-file-name>
+java -jar ./target/app-name-SNAPSHOT.jar
+
 ./mvnw clean compile test
 ```
