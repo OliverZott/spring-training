@@ -15,7 +15,7 @@ public class TrainingController {
 
 
     @Autowired
-    public TrainingController(@Qualifier("scubaTraining") Training training, @Qualifier("scubaTraining") Training secondTraining, Gear gear) {
+    public TrainingController(@Qualifier("scubaTraining") Training training, @Qualifier("swimTraining") Training secondTraining, Gear gear) {
         System.out.println("Constructor called: " + getClass().getSimpleName());
 
         this.secondTraining = secondTraining;
@@ -26,7 +26,7 @@ public class TrainingController {
 
     @GetMapping("training")
     public String GetTraining() {
-        return training.Plan();
+        return secondTraining.Plan();
     }
 
     @GetMapping("gear")
