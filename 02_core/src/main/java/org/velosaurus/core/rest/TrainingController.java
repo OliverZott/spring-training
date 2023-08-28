@@ -9,17 +9,12 @@ import org.velosaurus.utils.Gear;
 @RestController
 public class TrainingController {
 
-//    Setter Injection
-//    @Autowired
-//    @Qualifier("mtb_training")
-//    private final Training training;
-
     private final Training training;
     private final Gear gear;
 
 
     @Autowired
-    public TrainingController(@Qualifier("mtb_training") Training training, Gear gear) {
+    public TrainingController(@Qualifier("mtbTraining") Training training, Gear gear) {
 
         this.training = training;
         this.gear = gear;

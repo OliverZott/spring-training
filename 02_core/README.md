@@ -14,4 +14,7 @@ In spring two types of injection:
 ## Usage
 
 - `@Component` ... registers class as a **bean** in spring container usable for DI
+- `@Primary` ... define a default class for injection    
 - `@Qualifier` ... for several implementations 
+  - define Qualifier name in Class or use the ClassName itself (lower camel case version)
+  - qualifier overrules primary
